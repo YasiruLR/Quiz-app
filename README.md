@@ -1,5 +1,3 @@
-Meka `HTML`, `CSS`, `JavaScript` files walin **simple quiz app** ekak hadanna yana kenekuta `README.md` ekata danna **wisthara** (details) me wage danna puluwan:
-
 ---
 
 ## 🎯 Quiz App
