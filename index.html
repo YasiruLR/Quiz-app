@@ -17,10 +17,9 @@
         <div class="image-placeholder">
             <img src="assects/Ellipse 5.png" alt="Login Illustration">
         </div>
-        <form>
-            <input type="text" placeholder="Name" required>
-            <button type="submit">Start</button>
-            <a href="quiz.html"> Quiz </a>
+        <form onsubmit="return displayQuizPage();">
+            <input id="name" type="text" placeholder="Name" required>
+            <button type="submit" onclick="displayName()">Start</button>
         </form>
     </div>
     <script src="script.js"></script>
