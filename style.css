@@ -29,9 +29,16 @@ body {
     left: 20px;
     top: 5px;
 }
+#nameoutput {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 18px;
+    color: #ffffff;
+}
 
 .container {
-    background-color :#5EB562;
+    background-color :#5eb56289;
     padding: 40px;
     border-radius: 10px;
     text-align: center;
