@@ -1,3 +1,35 @@
+ body {
+        background-image: url('assets/1 1.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 100vh;
+        margin: 0;
+        padding-top: 120px; /* To prevent overlap with fixed navbar */
+      }
+
+      .quiz-card {
+        max-width: 100%;
+        width: 100%;
+        max-width: 400px;
+        background-color: rgba(255, 255, 255, 0.95);
+      }
+
+      .btn-next {
+        background-color: #5eb562;
+      }
+
+      @media (max-width: 576px) {
+        #nameoutput {
+          font-size: 14px;
+        }
+
+        .navbar img {
+          height: 60px !important;
+          width: 30px !important;
+        }
+      }
+
 body {
       padding-top: 120px; 
       overflow: hidden;
@@ -39,6 +71,22 @@ body {
         .btn-next:hover {
             background-color: #218838;
         }
-.nextbtn{
-  color: white;
+.btnnext {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    display: inline-block;
+    text-align: center;
 }
+
+.btn-container {
+    display: flex;
+    position: relative;
+    left: 58%;
+    top: 5px;
+}
+
