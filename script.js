@@ -15,17 +15,18 @@
 
 
   let time = 20; 
-  const timerElement = document.getElementById('timer');
-  
-  const updateTimer = () => {
-    let minutes = Math.floor(time / 20);
-    let seconds = time % 20;
-    timerElement.textContent = `${minutes < 10 ? '0' : ''}${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
-    
-    if (time > 0) {
-      time--;
-      setTimeout(updateTimer, 1000);
-    }
-  };
+const timerElement = document.getElementById('timer');
 
-  updateTimer();
+const updateTimer = () => {
+  let minutes = Math.floor(time / 60);
+  let seconds = time % 60;
+  
+  timerElement.textContent = `${minutes < 10 ? '0' : ''}${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+  
+  if (time > 0) {
+    time--;
+    setTimeout(updateTimer, 1000);
+  }
+};
+
+updateTimer();
