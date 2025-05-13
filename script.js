@@ -150,7 +150,12 @@ function nextQuestion() {
   } else {
     clearInterval(timerInterval);
     document.querySelector(".quiz-card").innerHTML = `
-      <h3 class="text-success">You scored ${score} out of ${quizData.length}</h3>
+     <div class="alert alert-success text-center mt-4 shadow-lg rounded">
+  <h3 class="fw-bold mb-0">
+   Congratulations! You scored <span class="text-dark">${score}</span> out of <span class="text-dark">${quizData.length}</span>! 
+  </h3>
+</div>
+
     `;
     nextBtn.style.display = "none";
     timerEl.style.display = "none";
