@@ -90,3 +90,14 @@ body {
     top: 4px;
 }
 
+.btnback{
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    display: inline-block;
+    text-align: center;
+}

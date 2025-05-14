@@ -147,6 +147,7 @@ function nextQuestion() {
 
   if (currentQuestion < quizData.length) {
     loadQuestion();
+   
   } else {
     clearInterval(timerInterval);
     document.querySelector(".quiz-card").innerHTML = `
@@ -155,6 +156,9 @@ function nextQuestion() {
    Congratulations! You scored <span class="text-dark">${score}</span> out of <span class="text-dark">${quizData.length}</span>! 
   </h3>
 </div>
+<button onclick="location.href='index.html'" class="btn btn-danger btn-lg">
+  Log Out
+</button>
 
     `;
     nextBtn.style.display = "none";
@@ -170,3 +174,4 @@ nextBtn.addEventListener("click", () => {
 
 
 loadQuestion();
+ 
