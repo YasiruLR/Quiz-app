@@ -5,7 +5,7 @@
         background-position: center;
         height: 100vh;
         margin: 0;
-        padding-top: 120px; /* To prevent overlap with fixed navbar */
+        padding-top: 120px; 
       }
 
       .quiz-card {
@@ -20,9 +20,7 @@
       }
 
       @media (max-width: 576px) {
-        #nameoutput {
-          font-size: 14px;
-        }
+        
 
         .navbar img {
           height: 60px !important;
@@ -47,30 +45,7 @@ body {
       object-fit: contain;
     }
 
-    @media (max-width: 576px) {
-      .card {
-        margin: 0 15px;
-      }
-    }
-     .custom-card {
-            border: 1px solid #dee2e6;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        .form-check-input:checked + .form-check-label {
-            background-color: #e6ffe6;
-            border-radius: 5px;
-            padding: 5px 10px;
-        }
-        .btn-next {
-            background-color: #28a745;
-            border: none;
-            padding: 5px 15px;
-            border-radius: 5px;
-        }
-        .btn-next:hover {
-            background-color: #218838;
-        }
+   
 .btnnext {
     background-color: #28a745;
     color: white;
@@ -145,3 +120,55 @@ body {
     background-color: #35ed35;
    
 }
+
+#nameoutput {
+  font-size: 2.5vw; 
+  margin-bottom: 0;
+  color: white;
+  text-align: right; 
+  padding: 0 2%; 
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+}
+
+
+@media (max-width: 768px) {
+  #nameoutput {
+    font-size: 4vw; 
+    padding: 0 5%;
+  }
+}
+
+
+@media (max-width: 576px) {
+  #nameoutput {
+    font-size: 5vw;
+    white-space: normal; 
+    text-overflow: clip; 
+  }
+}
+ @media (max-width: 576px) {
+      .card {
+        margin: 0 15px;
+      }
+    }
+     .custom-card {
+            border: 1px solid #dee2e6;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .form-check-input:checked + .form-check-label {
+            background-color: #e6ffe6;
+            border-radius: 5px;
+            padding: 5px 10px;
+        }
+        .btn-next {
+            background-color: #28a745;
+            border: none;
+            padding: 5px 15px;
+            border-radius: 5px;
+        }
+        .btn-next:hover {
+            background-color: #218838;
+        }
