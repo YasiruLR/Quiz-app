@@ -112,6 +112,17 @@ function startTimer() {
   }, 1000);
 }
 
+document.querySelectorAll('.form-check-input').forEach(input => {
+    input.addEventListener('change', () => {
+        const wrapper = input.closest('.form-check-wrapper');
+        if (input.checked) {
+            wrapper.classList.add('selected');
+        } else {
+            wrapper.classList.remove('selected');
+        }
+    });
+});
+
 function loadQuestion() {
   clearInterval(timerInterval);
   startTimer();
@@ -122,12 +133,12 @@ function loadQuestion() {
 
   const optionsHtml = quiz.options.map((opt, idx) => {
     return `
-      <div class="form-check mb-2 text-start">
-        <input class="form-check-input" type="radio" name="answer" id="option${idx}" value="${idx}" />
+    <div class="form-check mb-2 text-start">
+        <input style="accent-color:#5EB562" class="form-check-input" type="radio" name="answer" id="option${idx}" value="${idx}" />
         <label class="form-check-label" for="option${idx}">
-          ${opt}
+            ${opt}
         </label>
-      </div>
+    </div>
     `;
   }).join("");
 
@@ -136,36 +147,38 @@ function loadQuestion() {
 
 function nextQuestion() {
   const selectedOption = document.querySelector("input[name='answer']:checked");
-  if (selectedOption) {
-    const selectedAnswer = parseInt(selectedOption.value);
-    if (selectedAnswer === quizData[currentQuestion].correct) {
-      score++;
-    }
+  if (!selectedOption) {
+    alert("Please select an answer before Next Question.");
+    return; 
+  }
+
+  const selectedAnswer = parseInt(selectedOption.value);
+  if (selectedAnswer === quizData[currentQuestion].correct) {
+    score++;
   }
 
   currentQuestion++;
 
   if (currentQuestion < quizData.length) {
     loadQuestion();
-   
   } else {
     clearInterval(timerInterval);
     document.querySelector(".quiz-card").innerHTML = `
-     <div class="alert alert-success text-center mt-4 shadow-lg rounded">
-  <h3 class="fw-bold mb-0">
-   Congratulations! You scored <span class="text-dark">${score}</span> out of <span class="text-dark">${quizData.length}</span>! 
-  </h3>
-</div>
-<button onclick="location.href='index.html'" class="btn btn-danger btn-lg">
-  Log Out
-</button>
-
+      <div class="alert alert-success text-center mt-4 shadow-lg rounded">
+        <h3 class="fw-bold mb-0">
+          Congratulations! You scored <span class="text-dark">${score}</span> out of <span class="text-dark">${quizData.length}</span>!
+        </h3>
+      </div>
+      <button onclick="location.href='index.html'" class="btn btn-danger btn-lg">
+        Log Out
+      </button>
     `;
     nextBtn.style.display = "none";
     timerEl.style.display = "none";
     questionCountEl.style.display = "none";
   }
 }
+
 
 nextBtn.addEventListener("click", () => {
   clearInterval(timerInterval);
@@ -174,4 +187,4 @@ nextBtn.addEventListener("click", () => {
 
 
 loadQuestion();
- 
+
