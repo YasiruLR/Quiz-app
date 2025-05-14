@@ -5,7 +5,7 @@
         background-position: center;
         height: 100vh;
         margin: 0;
-        padding-top: 120px; /* To prevent overlap with fixed navbar */
+        padding-top: 120px; 
       }
 
       .quiz-card {
@@ -20,9 +20,7 @@
       }
 
       @media (max-width: 576px) {
-        #nameoutput {
-          font-size: 14px;
-        }
+        
 
         .navbar img {
           height: 60px !important;
@@ -47,7 +45,110 @@ body {
       object-fit: contain;
     }
 
-    @media (max-width: 576px) {
+   
+.btnnext {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-container {
+    display: flex;
+    position: relative;
+    left: 67.5%;
+    top: 4px;
+}
+
+.btnback{
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    display: inline-block;
+    text-align: center;
+}
+ .power-btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%; 
+    font-size: 24px; 
+    padding: 0;
+     position: fixed;
+    bottom: 20px;   
+    right: 20px;   
+    z-index: 9999;
+  }
+.form-check {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    box-sizing: border-box;
+}
+
+.form-check-wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.form-check-input {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    accent-color: #5fea66;
+    border: 2px solid #5EB562;
+    border-radius: 50%;
+}
+
+.form-check-input:checked {
+    background-color: #5EB562;
+}
+
+.form-check-wrapper.selected {
+    background-color: #35ed35;
+   
+}
+
+#nameoutput {
+  font-size: 2.5vw; 
+  margin-bottom: 0;
+  color: white;
+  text-align: right; 
+  padding: 0 2%; 
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+}
+
+
+@media (max-width: 768px) {
+  #nameoutput {
+    font-size: 4vw; 
+    padding: 0 5%;
+  }
+}
+
+
+@media (max-width: 576px) {
+  #nameoutput {
+    font-size: 5vw;
+    white-space: normal; 
+    text-overflow: clip; 
+  }
+}
+ @media (max-width: 576px) {
       .card {
         margin: 0 15px;
       }
@@ -71,22 +172,3 @@ body {
         .btn-next:hover {
             background-color: #218838;
         }
-.btnnext {
-    background-color: #28a745;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 20px;
-    display: inline-block;
-    text-align: center;
-}
-
-.btn-container {
-    display: flex;
-    position: relative;
-    left: 67.5%;
-    top: 4px;
-}
-
