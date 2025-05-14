@@ -14,7 +14,7 @@
   document.getElementById("nameoutput").textContent = name || "No name found.";
 
 
-  let time = 20; 
+let time = 20; 
 const timerElement = document.getElementById('timer');
 
 const updateTimer = () => {
