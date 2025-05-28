@@ -8,7 +8,7 @@ This is a simple Quiz Application built using HTML, Bootstrap, and JavaScript. I
 * Interactive multiple-choice questions
 * Instant feedback for correct/incorrect answers
 * Final score display at the end of the quiz
-* Fully responsive design with Bootstrap
+* Fully responsive design  cwith Bootstrap
 * Clean and modern UI
 
 ---
