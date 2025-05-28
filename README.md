@@ -32,6 +32,4 @@ This is a simple Quiz Application built using HTML, Bootstrap, and JavaScript. I
 * **Your Name**  
 * GitHub: [@YasiruLR](https://github.com/YasiruLR)
 
----  
 
-Let me know if you need further adjustments!
